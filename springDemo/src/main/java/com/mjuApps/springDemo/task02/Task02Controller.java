@@ -1,6 +1,5 @@
-package com.mjuApps.springDemo.task02.controller;
+package com.mjuApps.springDemo.task02;
 
-import com.mjuApps.springDemo.task02.model.Animal;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpHeaders;
@@ -14,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-public class Task02Controller {
+class Task02Controller {
 
     //todo live template - dodać sobie to do log
     private static final Logger LOG = LoggerFactory.getLogger(Task02Controller.class);

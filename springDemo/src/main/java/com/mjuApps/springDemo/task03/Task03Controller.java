@@ -8,10 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.net.URI;
 import java.time.LocalDateTime;
-import java.util.Date;
 
 @RestController
 public class Task03Controller {
@@ -22,7 +19,6 @@ public class Task03Controller {
     @ResponseStatus(HttpStatus.CREATED)
     public void doPostAnimal(@RequestBody Animal animal) {
         LOG.info("Received animal = " + animal.toString());
-//        return animal;
     }
 
     @PostMapping(value = "task03-0-1")

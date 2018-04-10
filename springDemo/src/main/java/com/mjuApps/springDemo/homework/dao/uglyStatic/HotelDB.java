@@ -19,6 +19,7 @@ public class HotelDB {
         hotelGenerators = new ArrayList<>();
         hotelGenerators.add(new GrandHotel());
         hotelGenerators.add(new HotelTransylwania());
+        hotelGenerators.add(new TestHotel());
 
         for (HotelGenerator hotelGenerator : hotelGenerators) {
             hotelList.add(hotelGenerator.buildHotel());

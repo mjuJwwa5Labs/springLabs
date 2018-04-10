@@ -13,31 +13,31 @@ public class HotelTransylwania implements HotelGenerator {
     @Override
     public List<Room> buildRooms() {
         List<Room> rooms = new ArrayList<>();
-        rooms.add(new Room.RoomBuilder().withRoomNumber(101).withBedsQty(4).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(102).withBedsQty(1).withBedsAdditionalQty(0).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(103).withBedsQty(1).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(104).withBedsQty(1).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(105).withBedsQty(3).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(106).withBedsQty(3).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(107).withBedsQty(3).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(108).withBedsQty(1).withBedsAdditionalQty(0).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(109).withBedsQty(3).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(110).withBedsQty(2).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(201).withBedsQty(3).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(202).withBedsQty(1).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(203).withBedsQty(1).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(204).withBedsQty(2).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(205).withBedsQty(4).withBedsAdditionalQty(0).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(206).withBedsQty(1).withBedsAdditionalQty(0).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(207).withBedsQty(3).withBedsAdditionalQty(0).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(208).withBedsQty(4).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.AVAILABLE).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(209).withBedsQty(1).withBedsAdditionalQty(2).withRoomStatus(RoomStatus.OCCUPIED).build());
-        rooms.add(new Room.RoomBuilder().withRoomNumber(210).withBedsQty(4).withBedsAdditionalQty(1).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(101).withBeds(4).withExtraBeds(2).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(102).withBeds(1).withExtraBeds(0).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(103).withBeds(1).withExtraBeds(2).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(104).withBeds(1).withExtraBeds(2).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(105).withBeds(3).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(106).withBeds(3).withExtraBeds(1).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(107).withBeds(3).withExtraBeds(2).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(108).withBeds(1).withExtraBeds(0).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(109).withBeds(3).withExtraBeds(2).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(110).withBeds(2).withExtraBeds(2).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(201).withBeds(3).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(202).withBeds(1).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(203).withBeds(1).withExtraBeds(2).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(204).withBeds(2).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(205).withBeds(4).withExtraBeds(0).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(206).withBeds(1).withExtraBeds(0).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(207).withBeds(3).withExtraBeds(0).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(208).withBeds(4).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(209).withBeds(1).withExtraBeds(2).withRoomStatus(RoomStatus.OCCUPIED).build());
+        rooms.add(new Room.RoomBuilder().withRoomNumber(210).withBeds(4).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).build());
         return rooms;
     }
 
     @Override
-    public List<Address> buildAdressess() {
+    public List<Address> buildAddressList() {
         Address hotel = new Address.AddressBuilder()
                 .withAddressName("Main Address")
                 .withCity("Radom")
@@ -53,6 +53,6 @@ public class HotelTransylwania implements HotelGenerator {
 
     @Override
     public Hotel buildHotel() {
-        return new Hotel("Hotel Transylwania", buildAdressess(), buildRooms());
+        return new Hotel("Hotel Transylwania", buildAddressList(), buildRooms());
     }
 }

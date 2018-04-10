@@ -5,15 +5,15 @@ public class Room {
     private Integer roomNumber;
     private RoomStatus status;
     private Integer beds;
-    private Integer bedsAdditional;
+    private Integer extraBeds;
 
     public Room() {}
 
     public Room(RoomBuilder roomBuilder) {
         this.roomNumber = roomBuilder.roomNumber;
-        this.status = roomBuilder.status;
+        this.status = roomBuilder.roomStatus;
         this.beds = roomBuilder.beds;
-        this.bedsAdditional = roomBuilder.bedsAdditional;
+        this.extraBeds = roomBuilder.extraBeds;
     }
 
     public Integer getRoomNumber() {
@@ -28,34 +28,34 @@ public class Room {
         return beds;
     }
 
-    public Integer getBedsAdditional() {
-        return bedsAdditional;
+    public Integer getExtraBeds() {
+        return extraBeds;
     }
 
     public static class RoomBuilder {
 
         private Integer roomNumber;
-        private RoomStatus status;
+        private RoomStatus roomStatus;
         private Integer beds;
-        private Integer bedsAdditional;
+        private Integer extraBeds;
 
-        public RoomBuilder withRoomNumber(Integer number) {
-            this.roomNumber = number;
+        public RoomBuilder withRoomNumber(Integer roomNumber) {
+            this.roomNumber = roomNumber;
             return this;
         }
 
         public RoomBuilder withRoomStatus(RoomStatus roomStatus) {
-            this.status = roomStatus;
+            this.roomStatus = roomStatus;
             return this;
         }
 
-        public RoomBuilder withBedsQty(Integer quantity) {
-            this.beds = quantity;
+        public RoomBuilder withBeds(Integer beds) {
+            this.beds = beds;
             return this;
         }
 
-        public RoomBuilder withBedsAdditionalQty(Integer quantity) {
-            this.bedsAdditional = quantity;
+        public RoomBuilder withExtraBeds(Integer extraBeds) {
+            this.extraBeds = extraBeds;
             return this;
         }
 

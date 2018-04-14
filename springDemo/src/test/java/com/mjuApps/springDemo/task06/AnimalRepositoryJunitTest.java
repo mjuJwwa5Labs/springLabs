@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
@@ -16,6 +17,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * @author marek_j on 2018-04-14
  */
+//@SpringBootTest   - jezeli chcę użyć innej instancji H2 do testów, bez konieczności wczytywania konfiguracji
+//                  - to muszę użyć tej adnotacji
+//                  - http://www.baeldung.com/spring-testing-separate-data-source
 @DataJpaTest
 @RunWith(SpringRunner.class)
 public class AnimalRepositoryJunitTest {

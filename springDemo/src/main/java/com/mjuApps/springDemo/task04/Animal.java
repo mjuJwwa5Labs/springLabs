@@ -1,6 +1,6 @@
 package com.mjuApps.springDemo.task04;
 
-class Animal {
+public class Animal {
 
     private String name;
     private Integer age;

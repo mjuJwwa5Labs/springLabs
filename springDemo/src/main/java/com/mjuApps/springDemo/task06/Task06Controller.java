@@ -1,9 +1,12 @@
 package com.mjuApps.springDemo.task06;
 
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @author marek_j on 2018-04-14
@@ -50,10 +53,32 @@ public class Task06Controller {
         return ResponseEntity.ok().body(animals);
     }
 
-    @GetMapping(value = "/animal/find/withLimit3")
+    @GetMapping(value = "/animal/find/top3")
     public ResponseEntity<?> findFirst3ByNameOrderByNameDesc() {
         List<Animal> animals = animalRepository.findFirst3ByOrderByNameDesc();
         return ResponseEntity.ok().body(animals);
+    }
+
+    @GetMapping(value = "/animal/{id}")
+    public ResponseEntity<?> findById(@PathVariable(name = "id") String id) {
+        Integer idInteger = Integer.valueOf(id);
+        Optional<Animal> animalOptional = animalRepository.findById(idInteger);
+        if (animalOptional.isPresent()) {
+            return ResponseEntity.ok().body(animalOptional.get());
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
+    }
+
+    @DeleteMapping(value = "/animal/{id}")
+    public ResponseEntity<?> deleteById(@PathVariable(name = "id") String id) {
+        Integer idInteger = Integer.valueOf(id);
+        try {
+            animalRepository.deleteById(idInteger);
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+        } catch (EmptyResultDataAccessException ex) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 
 }

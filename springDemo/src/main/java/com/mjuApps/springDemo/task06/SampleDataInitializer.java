@@ -18,10 +18,10 @@ public class SampleDataInitializer {
 
     @PostConstruct
     void init() {
-        animalRepository.save(new Animal("Piesek Leszek", 10));
-        animalRepository.save(new Animal("Test1", 1));
-        animalRepository.save(new Animal("Test5", 2));
-        animalRepository.save(new Animal("Test3", 3));
-        animalRepository.save(new Animal("Test2", 4));
+        animalRepository.save(new Animal(null,"Piesek Leszek", 10));
+        animalRepository.save(new Animal(null,"Test1", 1));
+        animalRepository.save(new Animal(null,"Test5", 2));
+        animalRepository.save(new Animal(null,"Test3", 3));
+        animalRepository.save(new Animal(null,"Test2", 4));
     }
 }

@@ -17,4 +17,8 @@ public interface AnimalRepository extends JpaRepository<Animal, Integer>{
     List<Animal> findByNameOrAge(String name, Integer age);
 
     List<Animal> findFirst3ByOrderByNameDesc();
+
+    void deleteById(Integer id);
+
+//    List<Animal> findByOwner_name(); - zakładając, że encja Animal ma pole private Owner owner, to szuka ownera po name
 }

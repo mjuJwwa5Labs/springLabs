@@ -73,12 +73,19 @@ public class Task06Controller {
     @DeleteMapping(value = "/animal/{id}")
     public ResponseEntity<?> deleteById(@PathVariable(name = "id") String id) {
         Integer idInteger = Integer.valueOf(id);
-        try {
+
+        if (animalRepository.findById(idInteger).isPresent()) {
             animalRepository.deleteById(idInteger);
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        } catch (EmptyResultDataAccessException ex) {
+        } else {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
+    }
+
+    @PostMapping(value = "/animal/list")
+    public ResponseEntity<?> addNewAnimal(@RequestBody List<Animal> animalList) {
+        animalRepository.saveAll(animalList);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
 }

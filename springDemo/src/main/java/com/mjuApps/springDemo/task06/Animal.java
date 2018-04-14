@@ -16,8 +16,7 @@ class Animal {
     @Column(name = "age")
     private Integer age;
 
-    public Animal(Integer id, String name, Integer age) {
-        this.id = id;
+    public Animal(String name, Integer age) {
         this.name = name;
         this.age = age;
     }

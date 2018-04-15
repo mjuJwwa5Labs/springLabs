@@ -9,12 +9,12 @@ import javax.validation.constraints.NotNull;
  */
 public class CreateAnimalCommand {
 
-    @NotNull(message = "name can't be null")
-    @NotEmpty(message = "name can't be empty string")
+    @NotNull(message = "name can't be empty or null")
+    @NotEmpty(message = "name can't be empty or null")
     private String name;
 
     @NotNull(message = "age can't be null")
-    @Min(value = 0, message = "age can't be less then 0 years old")
+    @Min(value = 0, message = "age can't be less then 0")
     private Integer age;
 
     public CreateAnimalCommand() {

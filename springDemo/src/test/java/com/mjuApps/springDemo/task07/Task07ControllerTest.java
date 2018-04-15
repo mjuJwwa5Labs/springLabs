@@ -79,6 +79,47 @@ public class Task07ControllerTest {
                 .assertThat()
                 .statusCode(HttpStatus.BAD_REQUEST.value())
                 .header("Location", nullValue())
-                .body("errors.defaultMessage",hasItem("name can't be null"));
+                .body("validationErrors.message",hasItem("name can't be empty or null"));
     }
+
+    @Test
+    public void shouldFailWhenAnimalAgeIsLessThanZero() {
+        //given
+        RequestSpecification given = given()
+                .port(port)
+                .body(new CreateAnimalCommand("imie", -1))
+                .header(CONTENT_TYPE, APPLICATION_JSON_VALUE)
+                .log().all();
+        //when
+        Response when = given
+                .when()
+                .post("/task07");
+        when.then()
+                .log().all()
+                .assertThat()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
+                .header("Location", nullValue())
+                .body("validationErrors.message",hasItem("age can't be less then 0"));
+    }
+
+
+    @Test
+    public void shouldCreateAnimalAndReturnCreatedResponseWhenAgeIsZero() {
+        //given
+        RequestSpecification given = given()
+                .port(port)
+                .body(new CreateAnimalCommand("imie", 0))
+                .header(CONTENT_TYPE, APPLICATION_JSON_VALUE)
+                .log().all();
+        //when
+        Response when = given
+                .when()
+                .post("/task07");
+        when.then()
+                .log().all()
+                .assertThat()
+                .statusCode(HttpStatus.CREATED.value())
+                .header("Location", containsString("localhost:" + port + "/task07"));
+    }
+
 }

@@ -1,5 +1,6 @@
 package com.mjuApps.springDemo.task06;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,6 +27,7 @@ public class Task06Controller {
     }
 
     @GetMapping(value = "/animal")
+    @ApiOperation(value = "doaje nowego zwierza", response = Animal.class, responseContainer="List", tags = "ANIMALS")
     public ResponseEntity<?> getAllAnimals() {
         List<Animal> animals = animalRepository.findAll();
         return ResponseEntity.ok().body(animals);

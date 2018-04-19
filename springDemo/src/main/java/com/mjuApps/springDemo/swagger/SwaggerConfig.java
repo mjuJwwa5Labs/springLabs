@@ -1,4 +1,4 @@
-package com.mjuApps.springDemo.task08;
+package com.mjuApps.springDemo.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class SwaggerConfig {
     public Docket customImplementation() {
         return new Docket(DocumentationType.SWAGGER_2)
             .select()
-            .apis(RequestHandlerSelectors.basePackage("com.mjuApps.springDemo.task06"))
+            .apis(RequestHandlerSelectors.basePackage("com.mjuApps.springDemo.homework.controller"))
             .paths(PathSelectors.regex(".*"))
             .build()
             .apiInfo(apiInfo());

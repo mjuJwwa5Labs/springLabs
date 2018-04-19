@@ -1,4 +1,4 @@
-package com.mjuApps.springDemo.task08;
+package com.mjuApps.springDemo.swagger;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

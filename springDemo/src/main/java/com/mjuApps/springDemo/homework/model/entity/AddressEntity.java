@@ -32,7 +32,7 @@ public class AddressEntity {
     @JoinColumn(name="hotel_id")
     private HotelEntity hotelEntity;
 
-    public AddressEntity() {}
+    private AddressEntity() {}
 
     public AddressEntity(String addressName, String street, String streetNumber, String city, String zipCode, String phoneNumber, HotelEntity hotelEntity) {
         this.addressName = addressName;

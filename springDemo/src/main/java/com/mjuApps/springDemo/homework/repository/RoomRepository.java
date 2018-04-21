@@ -13,4 +13,6 @@ import java.util.Optional;
 public interface RoomRepository extends JpaRepository<RoomEntity, Integer>{
 
     Optional<RoomEntity> findByIdAndRoomNumber(Integer hotelId, Integer roomNumber);
+
+//    List<HotelEntity> findByBedsGreaterThanOrBedsLessThan(Integer bedsGreaterThan, Integer bedsLessThan);
 }

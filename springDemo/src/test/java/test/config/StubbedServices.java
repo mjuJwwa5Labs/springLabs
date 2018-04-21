@@ -1,7 +1,7 @@
 package test.config;
 
-import com.mjuApps.springDemo.task04.Animal;
-import com.mjuApps.springDemo.task04.AnimalService;
+import com.mjuApps.springDemo.tasks.task04.Animal;
+import com.mjuApps.springDemo.tasks.task04.AnimalService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

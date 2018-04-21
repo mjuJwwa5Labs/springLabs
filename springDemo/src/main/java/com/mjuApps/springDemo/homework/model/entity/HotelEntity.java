@@ -20,7 +20,7 @@ public class HotelEntity {
     @OneToMany(mappedBy = "hotelEntity", cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
     private List<RoomEntity> roomList;
 
-    public HotelEntity() {}
+    private HotelEntity() {}
 
     public HotelEntity(String name, List<AddressEntity> addressList, List<RoomEntity> roomList) {
         this.name = name;

@@ -5,8 +5,8 @@ import com.mjuApps.springDemo.homework.model.entity.HotelEntity;
 import com.mjuApps.springDemo.homework.model.entity.RoomEntity;
 import com.mjuApps.springDemo.homework.model.entity.RoomStatus;
 import com.mjuApps.springDemo.homework.repository.HotelRepository;
-import com.mjuApps.springDemo.task06.Animal;
-import com.mjuApps.springDemo.task06.AnimalRepository;
+import com.mjuApps.springDemo.tasks.task06.Animal;
+import com.mjuApps.springDemo.tasks.task06.AnimalRepository;
 import org.springframework.context.annotation.Configuration;
 
 import javax.annotation.PostConstruct;
@@ -191,10 +191,10 @@ public class SampleDataInitializer {
 
     private List<RoomEntity> buildHotelTestowyRooms(HotelEntity hotelEntity) {
         List<RoomEntity> rooms = new ArrayList<>();
-            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(1).withBeds(1).withExtraBeds(1).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
-            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(2).withBeds(2).withExtraBeds(2).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
-            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(3).withBeds(3).withExtraBeds(3).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
-            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(100).withBeds(100).withExtraBeds(100).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
+            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(1).withBeds(20).withExtraBeds(21).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
+            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(2).withBeds(30).withExtraBeds(31).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
+            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(3).withBeds(40).withExtraBeds(41).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
+            rooms.add(new RoomEntity.RoomBuilder().withRoomNumber(100).withBeds(100).withExtraBeds(101).withRoomStatus(RoomStatus.AVAILABLE).withHotelEntity(hotelEntity).build());
         return rooms;
     }
 

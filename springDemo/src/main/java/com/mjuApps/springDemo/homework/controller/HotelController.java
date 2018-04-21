@@ -8,7 +8,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
@@ -49,7 +52,7 @@ public class HotelController {
     public ResponseEntity<RoomView> getRoomByRoomNumberAndHotelId(@PathVariable Integer hotelId, @PathVariable Integer roomNumber) {
         RoomView roomView = hotelService.getRoomByHotelIdAndRoomNumber(hotelId,roomNumber);
         if (roomView==null) {
-            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
         return ResponseEntity.status(HttpStatus.OK).location(pathWithId(hotelId,roomNumber)).body(roomView);
     }

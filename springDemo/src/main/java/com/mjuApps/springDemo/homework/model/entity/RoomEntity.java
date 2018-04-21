@@ -27,7 +27,7 @@ public class RoomEntity {
     @JoinColumn(name = "hotel_id")
     private HotelEntity hotelEntity;
 
-    public RoomEntity() {}
+    private RoomEntity() {}
 
     public RoomEntity(Integer roomNumber, RoomStatus status, Integer beds, Integer extraBeds, HotelEntity hotelEntity) {
         this.roomNumber = roomNumber;

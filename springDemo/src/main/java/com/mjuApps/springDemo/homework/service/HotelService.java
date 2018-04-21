@@ -3,12 +3,14 @@ package com.mjuApps.springDemo.homework.service;
 import com.mjuApps.springDemo.homework.mapper.HotelMapper;
 import com.mjuApps.springDemo.homework.model.entity.HotelEntity;
 import com.mjuApps.springDemo.homework.model.entity.RoomEntity;
+import com.mjuApps.springDemo.homework.model.query.HotelQuery;
 import com.mjuApps.springDemo.homework.model.view.HotelView;
 import com.mjuApps.springDemo.homework.model.view.RoomView;
 import com.mjuApps.springDemo.homework.repository.HotelRepository;
 import com.mjuApps.springDemo.homework.repository.RoomRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,4 +55,16 @@ public class HotelService {
         }
         return null;
     }
+
+    //todo hotelRepository.findAll() - wersja z example
+    //todo springData query builder (fluent builder)
+
+//    public List<HotelView> findHotelByHotelQuery(HotelQuery hotelQuery) {
+////        List<HotelEntity> hotelEntities = hotelRepository.findHotelByQuery(hotelQuery.getMinBeds());
+//        HotelQuery hotelQueryObject = hotelQuery;
+//        List<HotelEntity> hotelEntities = hotelRepository.findHotelByQuery(hotelQuery.getMinBeds(),hotelQuery.getMaxBeds(),
+//                                                              hotelQuery.getMinExtraBeds(),hotelQuery.getMaxExtraBeds());
+//        List<HotelView> hotelViews = hotelMapper.mapHotelEntitiesListToHotelViewList(hotelEntities);
+//        return hotelViews;
+//    }
 }
